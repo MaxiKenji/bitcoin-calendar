@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Calendar - Convert Years to Bitcoin Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-logo">
+                <img id="logo" src="logo.svg" alt="Bitcoin logo" height="36">
+                <h1 class="header-title">Bitcoin Calendar</h1>
+            </div>
+            <p class="header-subtitle">Convert any Gregorian year to Bitcoin Calendar format</p>
+            <p class="header-hint">Year 0 marks the invention of Bitcoin (2008 AD). Years before are labeled "Before Bitcoin (BB)" and years after are "After Bitcoin (AB)".</p>
+        </header>
+
+        <main>
+            <div class="converter-card card">
+                <h2 class="card-title">Year Converter</h2>
+                <p class="card-subtitle">Enter a Gregorian calendar year to convert</p>
+                
+                <div class="input-row">
+                    <input 
+                        type="text" 
+                        id="year-input" 
+                        class="year-input" 
+                        placeholder="e.g., 2024"
+                        aria-label="Enter year to convert"
+                        autocomplete="off"
+                    >
+                    <button id="convert-btn" class="convert-btn" type="button" aria-label="Convert year to Bitcoin calendar">
+                        Convert
+                    </button>
+                </div>
+
+                <div id="result-box" class="result-box hidden">
+                    <div class="result-content">
+                        <div class="result-main">
+                            <span id="result" class="result-number"></span>
+                            <p class="result-label"></p>
+                        </div>
+                        <button class="copy-btn" id="copy-btn" type="button" aria-label="Copy result to clipboard" title="Copy to clipboard">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="toggle-row" id="toggle-row">
+                    <div class="toggle-info">
+                        <div class="toggle-title">Genesis Block Reference</div>
+                        <div class="toggle-subtitle">Use Genesis Block (2009) as Year 0 instead of Whitepaper (2008)</div>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="genesis-toggle" aria-label="Toggle Genesis Block reference">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="examples-card card">
+                <h3 class="examples-title">Example Conversions</h3>
+                <div class="examples-grid" id="examples-grid">
+                    <!-- Examples will be populated by JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-text">Built to commemorate the revolutionary impact of Bitcoin on the world. 🚀</p>
+            <a href="#" class="donate-btn" id="donate-btn">
+                ⚡ Donate Bitcoin
+            </a>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
