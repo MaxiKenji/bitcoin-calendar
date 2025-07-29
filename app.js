@@ -189,13 +189,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const examples = [
             { year: 1971, label: 'Nixon Shock' },
-            { year: 1944, label: 'Bretton Woods' },
-            { year: currentYearZero, label: genesisToggle.checked ? 'Genesis Block' : 'Bitcoin Whitepaper' },
-            { year: 2017, label: 'ATH Bull Run' },
-            { year: 2140, label: 'Last Bitcoin' },
+            { year: currentYearZero, label: genesisToggle.checked ? 'Genesis Block' : 'Whitepaper' },
             { year: currentYear, label: 'Current Year' },
-            { year: 2001, label: 'Dot-com Crash' },
-            { year: 1913, label: 'Federal Reserve' }
+            { year: 2140, label: 'Last Bitcoin' },
         ];
         
         examplesGrid.innerHTML = '';
