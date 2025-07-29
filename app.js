@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
    
    donateBtn.addEventListener('click', function (e) {
   e.preventDefault();                 // keep if <a> has an href you don’t want to follow
-  window.location.href = 'https://btcpay.btc.aw/api/v1/invoices?storeId=EhvLpeoGjxPkshjeyVPbzjoJfQd9F1LiuCKEfXuefpkX&checkoutDesc=Support+<3&browserRedirect=https://maxikenji.github.io/bitcoin-calendar/&currency=EUR&defaultPaymentMethod=BTC_LNURLPAY';
+  window.location.href = 'https://btcpay.btc.aw/api/v1/invoices?storeId=EhvLpeoGjxPkshjeyVPbzjoJfQd9F1LiuCKEfXuefpkX&price=1&currency=USD';
 });
     
     function handleConvert() {
