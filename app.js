@@ -59,10 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     copyBtn.addEventListener('click', handleCopy);
     
-    donateBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('Bitcoin donation functionality would be implemented here. Thank you for your interest in supporting the project!');
-    });
+   
+   donateBtn.addEventListener('click', function (e) {
+  e.preventDefault();                 // keep if <a> has an href you don’t want to follow
+  window.location.href = 'https://btcpay.btc.aw/api/v1/invoices?storeId=EhvLpeoGjxPkshjeyVPbzjoJfQd9F1LiuCKEfXuefpkX&price=1&currency=USD';
+});
     
     function handleConvert() {
         const inputValue = yearInput.value.trim();
