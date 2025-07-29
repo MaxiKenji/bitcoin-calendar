@@ -1166,7 +1166,23 @@ input:focus-visible + .toggle-slider {
 /* Mobile Styles */
 @media (max-width: 767px) {
   .container {
+     .container {
     padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .card {
+    padding: var(--spacing-lg);
+  }
+  
+  /* Aggiungi questa regola */
+  .year-input {
+    padding: var(--spacing-md);
+  }
+  
+  .header-title {
+    font-size: 28px;
+  }
+  /* resto del codice mobile... */
   }
   
   .card {
